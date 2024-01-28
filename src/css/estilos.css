@@ -29,10 +29,11 @@
     display: flex;
     flex-direction: column;
     width: 50%;
-    height: 378px;
+    min-height: 378px;
+    height: 50%;
     background-color: #fff;
     padding: 2rem;
-    gap: 7px;
+    justify-content: space-evenly;
 }
 
 .main .formulario .validacao {
@@ -46,10 +47,6 @@
     border-radius: 5px;
     border: 1px solid #000000;
     font-weight: 700;
-}
-
-.main .formulario .validacao .input:checked {
-    border: 1px solid #000000;
 }
 
 .main .formulario .validacao .input.mensagem {
@@ -80,11 +77,6 @@
     flex-direction: column;
     width: 100%;
     gap: 10px;
-}
-
-.main .formulario .container-button .obrigatorio {
-    margin-left: -.7rem;    
-    margin-top: -.8rem;
 }
 
 .main .formulario .container-button .button {
