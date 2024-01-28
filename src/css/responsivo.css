@@ -1,0 +1,15 @@
+@media (max-width: 550px) {
+    .main {
+        flex-direction: column;
+        height: fit-content;
+        padding: 20px;
+    }
+
+    .main .texto {
+        width: 100%;
+    }
+
+    .main .formulario {
+        width: 100%;
+    }
+}
