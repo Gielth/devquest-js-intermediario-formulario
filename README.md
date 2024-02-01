@@ -8,4 +8,6 @@ O design foi seguido conforme um arquivo passado para nos por meio do FIGMA, ond
 
 Tive algumas dificuldades enquanto estava realizando o código, 1 delas foi o fato de que o button, quando dentro de uma tag form, sempre funcionava como um botão submit, o que meio que impossibilitava a criação da validação por meio exclusivo do JS, o que me fez fazer com que a tag que envolvesse todo o formulario fosse apenas uma div.
 
+update = depois de ter feito o envio propriamente dito, ajudando alguns colegas do curso, fiquei sabendo do .preventDefault() e ai resolvi atualizar minha solução conforme.
+
 No muito foi bem tranquilo.
