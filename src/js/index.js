@@ -15,41 +15,26 @@ passo 5 - se estiverem vazios, inserir a classe invalido no input e a classe ati
 
 */
 
-const botao = document.getElementById('button');
+const form = document.getElementById('formulario');
 
-botao.addEventListener('click', () => {
-    const validacao = document.querySelectorAll('.validacao');
+form.addEventListener('submit', (event) => {
+    event.preventDefault()
+    const inputs = document.querySelectorAll('.input');
+    const spans = document.querySelectorAll('span')
 
-    validacao.forEach((element) => {
-        const input = element.firstElementChild
-        const span = element.lastElementChild
-
-        verificaValidade(input, span);
-        
-    })
-    
-})
-
-
-function verificaValidade(input, span) {
-    if (input.value === "") {
-        if (input.classList.contains('valido')) {
-            input.classList.remove('valido');
-        }
-
-        input.classList.add('invalido');
-        span.classList.add('ativo');
-
-    } else if (input.value !== "") {
-        if (input.classList.contains('invalido')) {
-            input.classList.remove('invalido');
-            span.classList.remove('ativo');
+    inputs.forEach((input, index) => {
+        if (input.value === "") {
+            input.classList.add('invalido');
+            spans[index].classList.add('ativo');
+        } else {
+            if (input.classList.contains('invalido')) {
+                input.classList.remove('invalido');
+                spans[index].classList.remove('ativo');
+                input.classList.add('valido');
+            }
             input.classList.add('valido');
         }
+    })
 
-        input.classList.add('valido');
-
-    }
-    
-}
+})
 
