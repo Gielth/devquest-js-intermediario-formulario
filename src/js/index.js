@@ -24,6 +24,9 @@ form.addEventListener('submit', (event) => {
 
     inputs.forEach((input, index) => {
         if (input.value === "") {
+            if (input.classList.contains('valido')){
+                input.classList.remove('valido')
+            }
             input.classList.add('invalido');
             spans[index].classList.add('ativo');
         } else {
